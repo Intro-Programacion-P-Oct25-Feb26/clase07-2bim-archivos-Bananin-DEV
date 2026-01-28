@@ -22,6 +22,7 @@ public class LeerArchivoTexto {
             while (entrada.hasNext()) {
                 String linea = entrada.nextLine();
                 List<String> lista = Arrays.asList(linea.split("\\|"));
+                // se usa doble pipe cuando la separacion es diferente de , o ;
                 ArrayList<String> linea_partes = new ArrayList<>(lista);
                 
                 
@@ -33,7 +34,7 @@ public class LeerArchivoTexto {
 
             } // fin de while
             entrada.close();
-        } // fin de try
+        } // fin de tryit
         catch (Exception e) {
             System.err.println("Error al leer del archivo.");
             System.exit(1);
