@@ -7,6 +7,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
+import java.io.File;
 public class Estadistica{
 
 public static double obtenerPromedio() {
@@ -16,7 +17,7 @@ public static double obtenerPromedio() {
         double promedio;
         
         try {
-          Scanner entrada = new Scanner(("data/sucursales.txt"));
+          Scanner entrada = new Scanner(new File("data/sucursales.txt"));
             
             while (entrada.hasNext()) {
                 String linea = entrada.nextLine();
