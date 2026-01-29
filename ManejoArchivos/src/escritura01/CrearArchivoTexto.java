@@ -6,9 +6,10 @@ import java.util.Formatter;
 public class CrearArchivoTexto {
 
     // agrega registros al archivo
-    public static void agregarRegistros(String valor) {
+    public static void agregarRegistros(String valor, String nombreArchivo) {
+        String ruta = String.format("data/%s.txt",nombreArchivo);
         try {
-            Formatter salida = new Formatter("data/salidaDatosPersonales.txt");
+            Formatter salida = new Formatter(ruta);
             salida.format("%s", valor);
             salida.close();
 
